@@ -52,7 +52,6 @@ database:setex('tshake:'..bot_id.."gemadd:user" .. msg.chat_id_ .. "" .. msg.sen
 local t = '💠┇ارسل لي عدد المجوهرات الان'  
 send(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
 end
-end
 ------------------------------------------------------------------------
 if text and text:match("^اضف مجوهرات (%d+)$") and msg.reply_to_message_id_ ~= 0 then
 local Num = text:match("^اضف مجوهرات (%d+)$")
@@ -73,6 +72,7 @@ send(msg.chat_id_, msg.id_,  1, "\n📥┇تم اضافة له {"..Num..'} من 
 end
 tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(msg.reply_to_message_id_)},reply, nil)
 return false
+end
 end
 ------------------------------------------------------------
 end
